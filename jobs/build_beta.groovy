@@ -1,7 +1,7 @@
 pipelineJob('build-beta') {
     definition {
         cps {
-            script(readFileFromWorkspace('pipelines/build-beta.groovy'))
+            script(readFileFromWorkspace('pipelines/build_beta.groovy'))
             sandbox()
         }
     }
