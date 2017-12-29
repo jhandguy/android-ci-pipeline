@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'QA Build!'
+                echo 'Android QA Build!'
             }
         }
     }
