@@ -3,7 +3,7 @@ pipelineJob("android-submit-playstore") {
 
   definition {
     cps {
-      script(readFileFromWorkspace('submit-playstore/Jenkinsfile'))
+      script(readFileFromWorkspace('pipelines/submit_playstore.groovy'))
     }
   }
 }
