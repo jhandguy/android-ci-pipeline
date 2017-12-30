@@ -3,7 +3,7 @@ pipeline {
   agent any
 
   stages {
-    stage('Seed Android Specific Jobs') {
+    stage('Seed Android Jobs') {
       steps {
         jobDsl targets: ['jobs/*.groovy'].join('\n'),
                removedJobAction: 'DELETE',
