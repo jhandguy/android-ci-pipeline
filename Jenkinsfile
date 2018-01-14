@@ -4,7 +4,7 @@ pipeline {
 
   stages {
     stage('Seed Android Jobs') {
-      git url 'https://github.com/jhandguy/app-ci-pipeline' branch: 'master'
+      git url 'https://github.com/jhandguy/app-ci-pipeline.git', branch: 'master'
 
       steps {
         jobDsl targets: ['jobs/*.groovy'].join('\n'),
