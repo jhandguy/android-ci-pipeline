@@ -6,13 +6,13 @@ pipeline {
     stage('Seed Cross Jobs') {
       steps {
 
-        bat 'ls'
-        bat 'ls jobs'
+        sh 'ls'
+        sh 'ls jobs'
 
         git url: 'https://github.com/jhandguy/app-ci-pipeline.git', branch: 'master'
 
-        bat 'ls'
-        bat 'ls jobs'
+        sh 'ls'
+        sh 'ls jobs'
 
         jobDsl targets: ['jobs/*.groovy'].join('\n'),
                removedJobAction: 'DELETE',
