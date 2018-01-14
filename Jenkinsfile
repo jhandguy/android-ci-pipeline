@@ -7,9 +7,10 @@ pipeline {
       steps {
         dir('shared') {
           git url: 'https://github.com/jhandguy/app-ci-pipeline.git', branch: 'generic'
+          sh 'cp jobs/*.groovy ../jobs'
         }
 
-        jobDsl targets: ['shared/jobs/*.groovy', 'jobs/*.groovy'].join('\n'),
+        jobDsl targets: ['jobs/*.groovy'].join('\n'),
                removedJobAction: 'DELETE',
                removedViewAction: 'DELETE',
                sandbox: true,
