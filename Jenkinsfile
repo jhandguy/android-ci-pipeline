@@ -6,7 +6,7 @@ pipeline {
     stage('Seed Jobs') {
       steps {
         dir('shared') {
-          git url: 'https://github.com/jhandguy/app-ci-pipeline.git', branch: 'master'
+          git url: 'https://github.com/jhandguy/app-ci-pipeline.git', branch: 'generic'
         }
 
         jobDsl targets: ['shared/jobs/*.groovy', 'jobs/*.groovy'].join('\n'),
