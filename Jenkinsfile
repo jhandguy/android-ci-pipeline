@@ -6,7 +6,7 @@ pipeline {
     stage('Seed Jobs') {
       steps {
         dir('shared') {
-          git url: 'https://github.com/jhandguy/app-ci-pipeline.git', branch: 'generic'
+          git url: 'https://github.com/jhandguy/app-ci-pipeline.git'
           sh 'cp jobs/*.groovy ../jobs'
         }
 
