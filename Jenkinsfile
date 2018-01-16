@@ -3,7 +3,7 @@ pipeline {
   agent any
 
   stages {
-    stage('Seed Jobs') {
+    stage('Seed Android Jobs') {
       steps {
         dir('shared') {
           git url: 'https://github.com/jhandguy/app-ci-pipeline.git'

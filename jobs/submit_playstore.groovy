@@ -4,6 +4,7 @@ pipelineJob("android-submit-playstore") {
   definition {
     cps {
       script(readFileFromWorkspace('pipelines/submit_playstore.groovy'))
+      sandbox()
     }
   }
 }
